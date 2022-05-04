@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +19,8 @@ class MyPlacesList : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMyPlacesListBinding
+    private lateinit var places: ArrayList<String>
+    private lateinit var listView: ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +36,19 @@ class MyPlacesList : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var places = ArrayList<String>()
+        places = ArrayList<String>()
         places.add("Tvrdjava")
         places.add("Trg Kralja Milana")
         places.add("Cair")
-        places.add("Park Sveto ")
+        places.add("Park Svetog Save")
 
+        listView = findViewById<ListView>(R.id.my_places_list)
+
+
+        //places = arrayOf("Tvrdjava", "Cair", "Park Svetog Save", "Trg Kralja Milana")
+        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, places)
+        //findViewById<ListView>(R.id.my_places_list).adapter = arrayAdapter
+        listView.adapter = arrayAdapter
     }
 
     override fun onSupportNavigateUp(): Boolean {
