@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        menuInflater.inflate(R.menu.menu_main, menu)
+//        return true
+//    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
@@ -50,8 +50,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_show_map -> Toast.makeText(this, "Show Map!", Toast.LENGTH_SHORT).show()
             R.id.action_new_places -> Toast.makeText(this, "New Places!", Toast.LENGTH_SHORT).show()
             R.id.action_my_places_list -> {
-                val i: Intent = Intent(this, MyPlacesList::class.java)
-                startActivity(i)
+                this.findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_HomeFragment_to_ListFragment)
+                //val i: Intent = Intent(this, SecondFragment::class.java)
+                //startActivity(i)
             }
             R.id.action_about -> {
                 val i: Intent = Intent(this, About::class.java)

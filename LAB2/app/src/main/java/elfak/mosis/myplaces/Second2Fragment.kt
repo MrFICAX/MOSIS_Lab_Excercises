@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.navigation.fragment.findNavController
 import elfak.mosis.myplaces.databinding.FragmentSecond2Binding
 
@@ -14,6 +16,7 @@ import elfak.mosis.myplaces.databinding.FragmentSecond2Binding
 class Second2Fragment : Fragment() {
 
     private var _binding: FragmentSecond2Binding? = null
+    private lateinit var places: ArrayList<String>
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -32,9 +35,15 @@ class Second2Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_Second2Fragment_to_First2Fragment)
-        }
+        places = ArrayList<String>()
+        places.add("Tvrdjava")
+        places.add("Trg Kralja Milana")
+        places.add("Cair")
+        places.add("Park Svetog Save")
+
+        val myPlacesList: ListView = requireView().findViewById<ListView>(R.id.my_places_list)
+        myPlacesList.adapter = ArrayAdapter<String>(view.context, android.R.layout.simple_list_item_1, places)
+
     }
 
     override fun onDestroyView() {
