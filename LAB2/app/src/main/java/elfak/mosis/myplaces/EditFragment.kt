@@ -26,7 +26,7 @@ class EditFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
             R.id.action_my_places_list -> {
-                this.findNavController().navigate(R.id.action_EditFragment_to_ListFragment)
+                findNavController().navigate(R.id.action_EditFragment_to_ListFragment)
                 true
             }
             else -> super.onOptionsItemSelected(item)

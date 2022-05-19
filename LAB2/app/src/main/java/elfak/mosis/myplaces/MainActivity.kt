@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_show_map -> Toast.makeText(this, "Show Map!", Toast.LENGTH_SHORT).show()
             R.id.action_new_places -> Toast.makeText(this, "New Places!", Toast.LENGTH_SHORT).show()
             R.id.action_my_places_list -> {
-                this.findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_HomeFragment_to_ListFragment)
+                //this.findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_HomeFragment_to_ListFragment)
                 //val i: Intent = Intent(this, SecondFragment::class.java)
                 //startActivity(i)
             }
