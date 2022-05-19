@@ -4,7 +4,7 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Home</string>
     <string name="second_fragment_label">My Places</string>
-    <string name="edit_fragment_label">Edit</string>
+    <string name="edit_fragment_label">Edit Place</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -17,6 +17,8 @@
     <string name="editmyplace_desc_label">Description:</string>
     <string name="editmyplace_finished_label">Finish</string>
     <string name="editmyplace_cancel_label">Cancel</string>
+    <string name="viewmyplace_finished_label">Close</string>
+    <string name="editmyplace_save_label">Save</string>
 
     <string name="about_text">
         <i>My Places</i> is an application that will help you remember characteristics and locations of your favourite places.

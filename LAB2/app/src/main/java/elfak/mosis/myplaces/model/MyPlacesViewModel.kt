@@ -12,4 +12,5 @@ class MyPlacesViewModel: ViewModel() {
         myPlacesList.add(place)
     }
 
+    var selected: MyPlace? = null
 }
