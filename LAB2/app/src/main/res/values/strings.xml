@@ -42,4 +42,11 @@
     <string name="title_activity_my_places_list">MyPlacesList</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_fragment_label">MapFragmentLabel</string>
+    <string name="editmyplace_longitude_label">Input longitude:</string>
+    <string name="editmyplace_latitude_label">Input latitude:</string>
+    <string name="editmyplace_button_set_coordinates">SET</string>
+    <string name="longitude">Longitude:</string>
+    <string name="description">Description:</string>
+    <string name="latitude">Latitude:</string>
 </resources>
