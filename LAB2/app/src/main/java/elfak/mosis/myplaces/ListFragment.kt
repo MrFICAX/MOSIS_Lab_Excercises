@@ -79,9 +79,9 @@ class ListFragment : Fragment() {
             override fun onCreateContextMenu(
                 menu: ContextMenu,
                 v: View?,
-                menuInfo: ContextMenu.ContextMenuInfo?
+                menuInfo: ContextMenu.ContextMenuInfo
             ) {
-              val info = menuInfo as AdapterView.AdapterContextMenuInfo
+                val info = menuInfo as AdapterView.AdapterContextMenuInfo
                 val myPlace: MyPlace = myPlacesViewModel.myPlacesList[info.position]
                 menu.setHeaderTitle(myPlace.name)
                 menu.add(0, 1, 1, "View place")
